@@ -4,9 +4,6 @@ using UnityEngine;
 
 namespace BulletMVC {
 
-    /*
-        MonoBehaviour View class for BulletView. Handles all the visible part of the bullet.
-    */
     public class BulletView : MonoBehaviour
     {
         private BulletController bulletController = null;
@@ -20,16 +17,10 @@ namespace BulletMVC {
             bulletController = _bulletController;
         }
 
-        /*
-            Returns the reference to the BulletController.
-        */
         public BulletController GetBulletController() {
             return bulletController;
         }
 
-        /*
-            Returns the reference to the Transform component.
-        */
         public Transform GetBulletTransform() {
             return this.transform;
         }

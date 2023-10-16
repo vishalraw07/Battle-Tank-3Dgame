@@ -36,9 +36,6 @@ namespace BulletMVC {
             BULLET_DISTANCE = bulletScriptableObject.BULLET_DISTANCE;
         }
 
-        /*
-            Returns the reference to the BulletController.
-        */
         public BulletController GetBulletController() {
             return bulletController;
         }

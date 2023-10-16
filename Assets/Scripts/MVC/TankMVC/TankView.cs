@@ -21,11 +21,6 @@ namespace TankMVC {
             tankController = _tankController;
         }
 
-        
-
-        /*
-            Returns List of MeshRenderers to change the tank Color.
-        */
         public MeshRenderer[] GetMaterialMeshes() {
             return COLOR_MATERIALS;
         }
@@ -38,11 +33,6 @@ namespace TankMVC {
            
         }
 
-         
-
-        /*
-            Returns reference to the Tranform component of the tank.
-        */
         public Transform GetTankTransform() {
             return this.transform;
         }

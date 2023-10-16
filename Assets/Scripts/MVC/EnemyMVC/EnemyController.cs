@@ -19,7 +19,6 @@ namespace EnemyMVC {
         private Transform playerTransform;
         private HealthBar healthBar;
         
-
         /*
             Constructor to set EnemyModel & EnemyView attributes. Also sets reference to StateMachine & HealthBar.
             Parameters :
@@ -33,10 +32,6 @@ namespace EnemyMVC {
             healthBar = enemyView.GetHealthBar();
         }
 
-        
-
-    
-
         /*
             Sets EnemyController attributes including initial Position, and NavMeshAgent parameters.
         */
@@ -48,7 +43,6 @@ namespace EnemyMVC {
             enemyPos = EnemyService.Instance.GetRandomPoint(enemyPos, 60f, playerTransform.position);
             enemyTransform.position = enemyPos;
         }
-
 
         /*
             Sets the reference of Transform of PlayerTank.
@@ -73,19 +67,10 @@ namespace EnemyMVC {
             }
         }
 
-        
-
-
-        /*
-            Returns reference to the EnemyModel for the enemy tank.
-        */
         public EnemyModel GetEnemyModel() {
             return enemyModel;
         }
 
-        /*
-            Returns reference to the EnemyView for the enemy tank.
-        */
         public EnemyView GetEnemyView() {
             return enemyView;
         }
@@ -106,9 +91,6 @@ namespace EnemyMVC {
             }
         }
 
-        /*
-            Returns reference to the Transform compoenent attached to the enemy.
-        */
         public Transform GetPlayerTransform() {
             return playerTransform;
         }

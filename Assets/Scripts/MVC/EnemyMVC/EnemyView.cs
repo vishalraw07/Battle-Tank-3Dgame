@@ -32,16 +32,12 @@ namespace EnemyMVC {
             enemyController.UpdateEnemyState();
         }
 
-        /*
-            Returns reference to the HealthBar attached with the Tank.
-        */
+       
         public HealthBar GetHealthBar() {
             return healthBar;
         }
 
-        /*
-            Returns List of MeshRenderers to change the tank Color.
-        */
+       
         public MeshRenderer[] GetMaterialMeshes() {
             return COLOR_MATERIALS;
         }
@@ -55,23 +51,14 @@ namespace EnemyMVC {
             enemyController.HandleEnemyCollision(collidedObject);
         }
 
-        /*
-            Returns reference to NavMeshAgent component.
-        */
         public NavMeshAgent GetNavMeshAgent() {
             return this.navMeshAgent;
         }
-
-        /*
-            Returns reference to Enemy Tank's transform.
-        */
+        
         public Transform GetEnemyTransform() {
             return this.transform;
         }
 
-        /*
-            Returns reference to EnemyController.
-        */
         public EnemyController GetEnemyController() {
             return enemyController;
         }

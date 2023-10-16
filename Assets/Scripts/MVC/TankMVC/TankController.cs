@@ -17,7 +17,6 @@ namespace TankMVC {
         // REFERENCES FROM VIEW
         private Transform tankTransform;
          
-
         /*
             Constructor to set TankModel & TankView attributes. Also sets reference to HealthBar & Transform.
             Parameters :
@@ -56,8 +55,6 @@ namespace TankMVC {
             SetTankRotation(horizontal, vertical);
         }
 
-       
-
         /*
             Sets Tank Rtation based on horizontal & vertical Inputs.
             Parameters : 
@@ -83,21 +80,13 @@ namespace TankMVC {
             tankTransform.Translate(vertical * tankTransform.forward.normalized * tankModel.TANK_SPEED * Time.deltaTime, Space.World);
         }
 
-        /*
-            Returns reference to the TankModel for the player tank.
-        */
         public TankModel GetTankModel() {
             return tankModel;
         }
-
-        /*
-            Returns reference to the TankView for the player tank.
-        */
+ 
         public TankView GetTankView() {
             return tankView;
         }
-
-   
     }
 
 }

@@ -50,16 +50,10 @@ namespace BulletMVC {
                 //BulletService.Instance.DestroyBullet(this, true);
         }
 
-        /*
-            Returns reference to the BulletModel for the bullet.
-        */
         public BulletModel GetBulletModel() {
             return bulletModel;
         }
         
-        /*
-            Returns reference to the BulletView for the bullet.
-        */
         public BulletView GetBulletView() {
             return bulletView;
         }

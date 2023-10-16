@@ -65,9 +65,6 @@ namespace EnemyMVC {
             enemyController = _enemyController;
         }
 
-        /*
-            Returns reference to EnemyController.
-        */
         public EnemyController GetEnemyController() {
             return enemyController;
         }
