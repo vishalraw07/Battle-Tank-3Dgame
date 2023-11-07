@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace EnemyMVC {
     /*
-        EnemyBaseState class. Will act as a base class for all the EnemyStates.
+        EnemyBaseState class.
+        Will act as a base class for all the EnemyStates.
     */
     public class EnemyBaseState
     {
@@ -19,9 +20,8 @@ namespace EnemyMVC {
             enemySM = _enemySM;
         }
         
-        /*
-            Will execute this function when Enemy enters this state.
-        */
+        //    Will execute this function when Enemy enters this state.
+        
         public virtual void OnStateEnter() {}
         
         /*
@@ -32,9 +32,8 @@ namespace EnemyMVC {
         */
         public virtual void OnStateUpdate(float distance, float CHASE_RANGE, float ATTACK_RANGE) {}
         
-        /*
-            Will execute this function when Enemy exits this state.
-        */
+        //    Will execute this function when Enemy exits this state.
+        
         public virtual void OnStateExit() {} 
     }
 

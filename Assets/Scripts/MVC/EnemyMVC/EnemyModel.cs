@@ -8,7 +8,8 @@ using Scriptables;
 namespace EnemyMVC {
 
     /*
-        Model class for Enemy Tank. Keeps track of all the properties associated with the enemy tank.
+        Model class for Enemy Tank.
+        Keeps track of all the properties associated with the enemy tank.
     */
     public class EnemyModel
     {
@@ -65,6 +66,8 @@ namespace EnemyMVC {
             enemyController = _enemyController;
         }
 
+        //    Returns reference to EnemyController.
+        
         public EnemyController GetEnemyController() {
             return enemyController;
         }

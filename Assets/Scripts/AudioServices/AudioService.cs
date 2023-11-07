@@ -17,7 +17,6 @@ namespace GameAudio {
         ACHIEVEMENT_UNLOCKED
     }
 
-
     /*
         Serializable Class GameAudio to fill gameAudios parameter in AudioService.
     */

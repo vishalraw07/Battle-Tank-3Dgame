@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Generics {
-    /*
-        Generic Class for Object Pool. 
-    */
+    
+    //    Generic Class for Object Pool. 
+    
     public class GenericObjectPool<T>
     {
         private Transform parentTransform;
         private GameObject objectPrefab;
-        
         public Queue<T> objectPool = new Queue<T>();
 
         /* 
@@ -33,7 +32,8 @@ namespace Generics {
         }
 
         /*
-            Gets a item from the ObjectPool. If the queue is empty, it creates a new object and returns it.
+            Gets a item from the ObjectPool.
+            If the queue is empty, it creates a new object and returns it.
         */
         public T GetItem() {
             if (objectPool.Count > 0) {

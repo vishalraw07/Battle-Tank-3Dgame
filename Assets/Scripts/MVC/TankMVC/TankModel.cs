@@ -5,7 +5,8 @@ using Scriptables;
 
 namespace TankMVC {
     /*
-        Enum for different types of Tank. Used to fetch ScriptableObject properties.
+        Enum for different types of Tank.
+        Used to fetch ScriptableObject properties.
     */
     public enum TankType {
         NONE = -1,
@@ -14,7 +15,8 @@ namespace TankMVC {
         FAST_SPEED = 2
     }
     /*
-        Model class for Player Tank. Keeps track of all the properties associated with the tank.
+        Model class for Player Tank.
+        Keeps track of all the properties associated with the tank.
     */
     public class TankModel
     {

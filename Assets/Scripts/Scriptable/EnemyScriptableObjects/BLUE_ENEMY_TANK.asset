@@ -9,6 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ea19c4fa69583246a23fda9a597cc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: f398d39eaaab74240a5124eaa2622558, type: 3}
   m_Name: BLUE_ENEMY_TANK
   m_EditorClassIdentifier: 
+  TANK_SPEED: 3.5
+  ROTATION_SPEED: 75
+  TANK_HEALTH: 175
+  TANK_TYPE: 0
+  TANK_MATERIAL_COLOR: {fileID: 2100000, guid: ff21ff0ea9b18924bb1fdfbb0e58f5cb, type: 2}
+  CHASE_RANGE: 40
+  ATTACK_RANGE: 30

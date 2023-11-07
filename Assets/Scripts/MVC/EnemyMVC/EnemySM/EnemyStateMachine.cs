@@ -4,9 +4,8 @@ using UnityEngine;
 
 namespace EnemyMVC {
 
-    /*
-        Enum for Different EnemyStates.
-    */
+    //    Enum for Different EnemyStates.
+    
     public enum EnemyState {
         ATTACK,
         PATROL,
@@ -15,7 +14,8 @@ namespace EnemyMVC {
     }
 
     /*
-        Class to implement State Machine for different Enemy States. Keeps track of Current State and state switching.
+        Class to implement State Machine for different Enemy States.
+        Keeps track of Current State and state switching.
     */
     public class EnemyStateMachine
     {
@@ -25,9 +25,8 @@ namespace EnemyMVC {
         private EnemyPatrolState patrolState;
         public EnemyBaseState currentEnemyState = null;
 
-        /*
-            Constructor to create references for all the different EnemyStates.
-        */
+        //    Constructor to create references for all the different EnemyStates.
+        
         public EnemyStateMachine() {
             attackState = new EnemyAttackState(this);
             chaseState = new EnemyChaseState(this);
@@ -45,9 +44,8 @@ namespace EnemyMVC {
             SwitchState(EnemyState.PATROL);
         }
 
-        /*
-            Returns the reference to EnemyController attached with StateMachine.
-        */
+        //    Returns the reference to EnemyController attached with StateMachine.
+        
         public EnemyController GetEnemyController() {
             return enemyController;
         }

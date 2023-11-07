@@ -15,7 +15,8 @@ namespace ParticleEffects {
     }
 
     /*
-        MonoSingleton ParticleEffectService class. Handles Pool of ParticleEffects & positions them accordingly.
+        MonoSingleton ParticleEffectService class.
+        Handles Pool of ParticleEffects & positions them accordingly.
     */
     public class ParticleEffectService : GenericMonoSingleton<ParticleEffectService>
     {
@@ -26,14 +27,14 @@ namespace ParticleEffects {
 
         private GenericObjectPool<ParticleSystem> tankExplosionPEPool;
         private GenericObjectPool<ParticleSystem> bulletExplosionPEPool;
-        private UnityEditor.MPE.EventService eventService;
+        private EventService eventService;
 
         /*
             Creates Event Service & Generates Pool for Tank Explosion & Bullet Explosion Particle Effects.
         */
         protected override void Awake() {
             base.Awake();
-            eventService = new UnityEditor.MPE.EventService();
+            eventService = new EventService();
             tankExplosionPEPool = new GenericObjectPool<ParticleSystem>();
             bulletExplosionPEPool = new GenericObjectPool<ParticleSystem>();
             tankExplosionPEPool.GeneratePool(TankExplosionPrefab.gameObject, 30, tankPETransform);
@@ -44,7 +45,7 @@ namespace ParticleEffects {
             Subscribes to onGameObjectDestroyed Event to trigger ParticleEffects.
         */
         private void OnEnable() {
-            UnityEditor.MPE.EventService.Instance.onGameObjectDestroyed += DisplayParticleEffect;
+            EventService.Instance.onGameObjectDestroyed += DisplayParticleEffect;
         }
 
         /*
@@ -70,11 +71,10 @@ namespace ParticleEffects {
             }
         }
 
-        /*
-            Unsubscribes to onGameObjectDestroyed Event to trigger ParticleEffects.
-        */
+        //    Unsubscribes to onGameObjectDestroyed Event to trigger ParticleEffects.
+        
         private void OnDisable() {
-            UnityEditor.MPE.EventService.Instance.onGameObjectDestroyed -= DisplayParticleEffect;
+            EventService.Instance.onGameObjectDestroyed -= DisplayParticleEffect;
         }
     }
 

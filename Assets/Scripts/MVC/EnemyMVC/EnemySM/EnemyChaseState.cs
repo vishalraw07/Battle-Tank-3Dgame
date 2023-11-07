@@ -5,16 +5,16 @@ using UnityEngine.AI;
 
 namespace EnemyMVC {
     /*
-        EnemyChaseState class. Defines the functionality for CHASE state.
+        EnemyChaseState class.
+        Defines the functionality for CHASE state.
     */
     public class EnemyChaseState : EnemyBaseState
     {
         
         public EnemyChaseState(EnemyStateMachine _enemySM) : base(_enemySM) {}
 
-        /*
-            Executes this function when Enemy enters CHASE state.
-        */
+        //    Executes this function when Enemy enters CHASE state.
+        
         public override void OnStateEnter()
         {
             base.OnStateEnter();
@@ -42,18 +42,16 @@ namespace EnemyMVC {
             }
         }
 
-        /*
-            Executes this function when Enemy exits CHASE state.
-        */
+        //    Executes this function when Enemy exits CHASE state.
+        
         public override void OnStateExit()
         {
             base.OnStateExit();
             // Debug.Log("CHASE STATE EXIT.");
         }
-
-        /*
-            Sets Chase Destination to that of PlayerTank. Uses NavMeshAgent.
-        */
+        
+        //    Sets Chase Destination to that of PlayerTank [Uses NavMeshAgent].
+        
         private void SetChaseDestination() {
             EnemyController _ec = enemySM.GetEnemyController();
             NavMeshAgent navAgent = _ec.GetEnemyView().GetNavMeshAgent();

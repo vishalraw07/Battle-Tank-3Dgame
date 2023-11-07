@@ -5,7 +5,8 @@ using UnityEngine;
 namespace BulletMVC {
 
     /*
-        Controller class for Bullet. Used to handle all logic & functionality of the Bullet Gameobject.
+        Controller class for Bullet.
+        Used to handle all logic & functionality of the Bullet Gameobject.
     */
     public class BulletController
     {
@@ -46,13 +47,17 @@ namespace BulletMVC {
                 yield return new WaitForEndOfFrame();
             }
             // DESTROY BULLET
-            //if (bulletView.gameObject.activeInHierarchy)
-                //BulletService.Instance.DestroyBullet(this, true);
+            if (bulletView.gameObject.activeInHierarchy)
+                BulletService.Instance.DestroyBullet(this, true);
         }
 
+        //    Returns reference to the BulletModel for the bullet.
+        
         public BulletModel GetBulletModel() {
             return bulletModel;
         }
+        
+        //    Returns reference to the BulletView for the bullet.
         
         public BulletView GetBulletView() {
             return bulletView;
@@ -64,7 +69,7 @@ namespace BulletMVC {
             - collidedObject : Object with which bullet collided.
         */
         public void HandleBulletCollision(Collision collidedObject) {
-            //BulletService.Instance.DestroyBullet(this, false);
+            BulletService.Instance.DestroyBullet(this, false);
         }
         
     }

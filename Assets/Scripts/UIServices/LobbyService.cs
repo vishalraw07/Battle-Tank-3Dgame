@@ -7,7 +7,8 @@ using GameAudio;
 
 namespace GameUI {
     /*
-        MonoSingleton LobbyService class. Handles all the operations of Lobby Scene.
+        MonoSingleton LobbyService class.
+        Handles all the operations of Lobby Scene.
     */
     public class LobbyService : GenericMonoSingleton<LobbyService>
     {
@@ -17,9 +18,8 @@ namespace GameUI {
             StartCoroutine(AnimateCamera());
         }
 
-        /*
-            Animates the Camera to have an oscillating effect.
-        */
+        //    Animates the Camera to have an oscillating effect.
+        
         private IEnumerator AnimateCamera() {
             while (true) {
                 while (MainCamera.transform.eulerAngles.y <= 90) {
@@ -39,7 +39,8 @@ namespace GameUI {
         }
 
         /*
-            Play the Game. Load the next Scene. Method is called when Play Button is clicked.
+            Play the Game. Load the next Scene.
+            Method is called when Play Button is clicked.
         */
         public void Play() {
             AudioService.Instance.PlayAudio(GameAudio.AudioType.BUTTON_CLICK);
@@ -48,7 +49,8 @@ namespace GameUI {
         }
 
         /*
-            Quits the Application. Method is called when Quit Button is clicked.
+            Quits the Application.
+            Method is called when Quit Button is clicked.
         */
         public void Quit() {
             AudioService.Instance.PlayAudio(GameAudio.AudioType.BUTTON_CLICK);

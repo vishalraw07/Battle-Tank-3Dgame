@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4620abdda835f4b9a9def87dd0caf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e0c53679be1ad843b3d15e6bfe492ee, type: 3}
   m_Name: EnemyConfigs
   m_EditorClassIdentifier: 
+  enemyConfigs:
+  - {fileID: 11400000, guid: 163423818e2b79b4a8fdd3114b19c533, type: 2}
+  - {fileID: 11400000, guid: ed20a6186dde9094aa5596efa16417e8, type: 2}
+  - {fileID: 11400000, guid: 711898a11233939409c8f96e47d55d2f, type: 2}

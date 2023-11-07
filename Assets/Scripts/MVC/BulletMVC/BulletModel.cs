@@ -5,7 +5,8 @@ using Scriptables;
 
 namespace BulletMVC {
     /*
-        Model class for Bullet. Keeps track of all the properties associated with the Bullet.
+        Model class for Bullet.
+        Keeps track of all the properties associated with the Bullet.
     */
     public class BulletModel
     {
@@ -36,6 +37,8 @@ namespace BulletMVC {
             BULLET_DISTANCE = bulletScriptableObject.BULLET_DISTANCE;
         }
 
+        //    Returns the reference to the BulletController.
+        
         public BulletController GetBulletController() {
             return bulletController;
         }

@@ -5,16 +5,16 @@ using UnityEngine.AI;
 
 namespace EnemyMVC {
     /*
-        EnemyAttackState class. Defines the functionality for ATTACK state.
+        EnemyAttackState class.
+        Defines the functionality for ATTACK state.
     */
     public class EnemyAttackState : EnemyBaseState
     {
         
         public EnemyAttackState(EnemyStateMachine _enemySM) : base(_enemySM) {}
 
-        /*
-            Executes this function when Enemy enters ATTACK state.
-        */
+        //    Executes this function when Enemy enters ATTACK state.
+        
         public override void OnStateEnter()
         {
             base.OnStateEnter();
@@ -40,18 +40,16 @@ namespace EnemyMVC {
             
         }
 
-        /*
-            Executes this function when Enemy exits ATTACK state.
-        */
+        //    Executes this function when Enemy exits ATTACK state.
+        
         public override void OnStateExit()
         {
             base.OnStateExit();
             // Debug.Log("ATTACK STATE EXIT.");
         }
 
-        /*
-            Sets Attack Destination of NavMeshAgent to player's position.
-        */
+        //    Sets Attack Destination of NavMeshAgent to player's position.
+        
         private void SetAttackDestination() {
             EnemyController _ec = enemySM.GetEnemyController();
             NavMeshAgent navAgent = _ec.GetEnemyView().GetNavMeshAgent();
@@ -59,9 +57,8 @@ namespace EnemyMVC {
             navAgent.SetDestination(playerTransform.position);
         }
 
-        /*
-            Attacks the Player and Fires Bullets towards' Player tank.
-        */
+        //    Attacks the Player and Fires Bullets towards' Player tank.
+        
         private IEnumerator AttackPlayer() {
             EnemyController _ec = enemySM.GetEnemyController();
             Transform playerTransform = _ec.GetPlayerTransform();

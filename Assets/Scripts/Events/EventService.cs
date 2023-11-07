@@ -19,21 +19,24 @@ namespace Events {
         public event Action<string> onAchievementUnlocked;
 
         /*
-            Invokes the onPlayerFiredBullet event. This is then used to trigger achievements & UI.
+            Invokes the onPlayerFiredBullet event.
+            This is then used to trigger achievements & UI.
         */
         public void InvokePlayerFiredEvent() {
             onPlayerFiredBullet?.Invoke();
         }
 
         /*
-            Invokes the onEnemyDeath event. This is then used to trigger achievements & UI.
+            Invokes the onEnemyDeath event.
+            This is then used to trigger achievements & UI.
          */
         public void InvokeEnemyDeathEvent() {
             onEnemyDeath?.Invoke();
         }
 
         /*
-            Invokes the onGameObjectDestroyed event. This is then used to trigger particle Effects.
+            Invokes the onGameObjectDestroyed event.
+            This is then used to trigger particle Effects.
         */
         public void InvokeParticleSystemEvent(ParticleEffectType particleEffectType, Vector3 position) {
             onGameObjectDestroyed?.Invoke(particleEffectType, position);
@@ -41,14 +44,16 @@ namespace Events {
         
 
         /*
-            Invokes the onAchievementUnlocked event. This is then used to trigger achievements & UI.
+            Invokes the onAchievementUnlocked event.
+            This is then used to trigger achievements & UI.
         */
         public void InvokeAchievementUnlockedEvent(string achievementText) {
             onAchievementUnlocked?.Invoke(achievementText);
         }
 
         /*
-            Invokes the onPlayerDeath event. This is then used to trigger Game Over UI.
+            Invokes the onPlayerDeath event.
+            This is then used to trigger Game Over UI.
          */
         public void InvokePlayerDeathEvent() {
             onPlayerDeath?.Invoke();

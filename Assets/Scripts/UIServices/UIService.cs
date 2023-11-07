@@ -9,7 +9,8 @@ using GameAudio;
 
 namespace GameUI {
     /*
-        MonoSingleton UIService class. Handles all the UI in the Gameplay Scene.
+        MonoSingleton UIService class.
+        Handles all the UI in the Gameplay Scene.
     */
     public class UIService : GenericMonoSingleton<UIService>
     {
@@ -18,9 +19,8 @@ namespace GameUI {
         [SerializeField] private GameObject gameOverUI;
         [SerializeField] private TextMeshProUGUI achievementText;
 
-        /*
-            Subscribes to onAchievementUnlocked & onPlayerDeath event.
-        */
+        //    Subscribes to onAchievementUnlocked & onPlayerDeath event.
+        
         private void OnEnable() {
             EventService.Instance.onAchievementUnlocked +=  AchievementUnlocked;
             EventService.Instance.onPlayerDeath += DisplayGameOverUI;
@@ -39,7 +39,8 @@ namespace GameUI {
         }
 
         /*
-            Displays Achievements until the Queue is empty. Deactivates & activates the UI accordingly.
+            Displays Achievements until the Queue is empty.
+            Deactivates & activates the UI accordingly.
         */
         private IEnumerator DisplayAchievements() {
             while (AchievementList.Count != 0) {
@@ -55,7 +56,8 @@ namespace GameUI {
         }
 
         /*
-            Restarts the Gameplay Level. Method is called when Restart Button is clicked. 
+            Restarts the Gameplay Level.
+            Method is called when Restart Button is clicked. 
         */
         public void RestartLevel() {
             AudioService.Instance.PlayAudio(GameAudio.AudioType.BUTTON_CLICK);
@@ -63,7 +65,8 @@ namespace GameUI {
         }
 
         /*
-            Goes back to Lobby scene. Method is called when Menu Button is clicked. 
+            Goes back to Lobby scene.
+            Method is called when Menu Button is clicked. 
         */
         public void MainMenu() {
             AudioService.Instance.PlayAudio(GameAudio.AudioType.BUTTON_CLICK);
@@ -71,16 +74,16 @@ namespace GameUI {
         }
 
         /*
-            Displays the Game Over Screen. Method is called after onPlayerDeath event is triggered. 
+            Displays the Game Over Screen.
+            Method is called after onPlayerDeath event is triggered. 
         */
         public void DisplayGameOverUI() {
             AudioService.Instance.StopAudio(GameAudio.AudioType.LEVEL_BG);
             gameOverUI.SetActive(true);
         }
-
-        /*
-            Unsubscribes to onAchievementUnlocked & onPlayerDeath event.
-        */
+        
+        //    Unsubscribes to onAchievementUnlocked & onPlayerDeath event.
+        
         private void OnDisable() {
             EventService.Instance.onAchievementUnlocked -= AchievementUnlocked;
             EventService.Instance.onPlayerDeath -= DisplayGameOverUI; 

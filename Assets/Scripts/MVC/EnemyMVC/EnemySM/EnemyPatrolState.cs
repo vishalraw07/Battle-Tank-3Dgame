@@ -5,16 +5,16 @@ using UnityEngine.AI;
 
 namespace EnemyMVC {
     /*
-        EnemyPatrolState class. Defines the functionality for PATROL state.
+        EnemyPatrolState class.
+        Defines the functionality for PATROL state.
     */
     public class EnemyPatrolState : EnemyBaseState
     {
         
         public EnemyPatrolState(EnemyStateMachine _enemySM) : base(_enemySM) {}
 
-        /*
-            Executes this function when Enemy enters PATROL state.
-        */
+        //    Executes this function when Enemy enters PATROL state.
+        
         public override void OnStateEnter()
         {
             base.OnStateEnter();
@@ -38,18 +38,16 @@ namespace EnemyMVC {
             }
         }
 
-        /*
-            Executes this function when Enemy exits PATROL state.
-        */
+        //    Executes this function when Enemy exits PATROL state.
+        
         public override void OnStateExit()
         {
             base.OnStateExit();
             // Debug.Log("PATROL STATE EXIT.");
         }
 
-        /*
-            Patrols the Environment after randomly choosing an destination and changing the location after interval.
-        */
+        //    Patrols the Environment after randomly choosing an destination and changing the location after interval.
+        
         private IEnumerator PatrolEnvironment() {
             EnemyController _ec = enemySM.GetEnemyController();
             NavMeshAgent navAgent = _ec.GetEnemyView().GetNavMeshAgent();

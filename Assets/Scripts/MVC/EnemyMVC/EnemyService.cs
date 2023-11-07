@@ -13,7 +13,8 @@ using ParticleEffects;
 namespace EnemyMVC {
 
     /*
-        MonoSingleton EnemyService class. Handles creation of enemy tanks & operations by communicating with other Services.
+        MonoSingleton EnemyService class.
+        Handles creation of enemy tanks & operations by communicating with other Services.
     */
     public class EnemyService : GenericMonoSingleton<EnemyService>
     {
@@ -24,9 +25,8 @@ namespace EnemyMVC {
         public EnemyScriptableObjectList scriptableConfigs;
         private Transform playerTank;
         
-        /*
-            Initialize Player Tank and Generate Enemy Pool.
-        */
+        //    Initialize Player Tank and Generate Enemy Pool.
+        
         protected override void Awake() {
             base.Awake();
             playerTank = GameObject.FindGameObjectWithTag("Player").transform;
@@ -49,9 +49,8 @@ namespace EnemyMVC {
             }
         }
 
-        /*
-            Spawns a new Enemy with Random Configs after enabling an object from EnemyPool.
-        */
+        //    Spawns a new Enemy with Random Configs after enabling an object from EnemyPool.
+        
         private void SpawnEnemy() {
             // Debug.Log(scriptableConfigs.enemyConfigs);
             int randomIndex = UnityEngine.Random.Range(0, scriptableConfigs.enemyConfigs.Length);
@@ -116,8 +115,8 @@ namespace EnemyMVC {
             enemyController.GetEnemyView().GetHealthBar().UpdateFill(enemyController.GetEnemyModel().TANK_TOTAL_HEALTH, enemyController.GetEnemyModel().TANK_TOTAL_HEALTH);
             enemyController.GetEnemyView().gameObject.SetActive(false);
             enemyPool.ReturnItem(enemyController.GetEnemyView());
-            UnityEditor.MPE.EventService.Instance.InvokeEnemyDeathEvent();
-            UnityEditor.MPE.EventService.Instance.InvokeParticleSystemEvent(ParticleEffectType.TANK_EXPLOSION, enemyController.GetEnemyView().transform.position);
+            EventService.Instance.InvokeEnemyDeathEvent();
+            EventService.Instance.InvokeParticleSystemEvent(ParticleEffectType.TANK_EXPLOSION, enemyController.GetEnemyView().transform.position);
         }
 
         /*

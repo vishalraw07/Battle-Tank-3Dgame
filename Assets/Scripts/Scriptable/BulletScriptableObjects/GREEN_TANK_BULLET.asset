@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e66994965fa754b4eab5e19839eac8b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 84c4793a40598814c9ec5f851f7bf090, type: 3}
   m_Name: GREEN_TANK_BULLET
   m_EditorClassIdentifier: 
+  BULLET_DAMAGE: 40
+  BULLET_SPEED: 15
+  BULLET_DISTANCE: 20
+  TANK_TYPE: 1

@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 namespace HealthServices {
     /*
-        HealthBar Monobehaviour class. Attached to Health Bar gameobject of every tank. Handles all the operations specific to Health Bar.
+        HealthBar Monobehaviour class.
+        Attached to Health Bar gameobject of every tank.
+        Handles all the operations specific to Health Bar.
     */
     public class HealthBar : MonoBehaviour
     {

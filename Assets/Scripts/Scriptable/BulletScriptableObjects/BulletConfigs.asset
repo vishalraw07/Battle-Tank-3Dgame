@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b2ad665769c644a909c5723159e60e, type: 3}
+  m_Script: {fileID: 11500000, guid: 45ea65df91e7ff549863d661b3273f3b, type: 3}
   m_Name: BulletConfigs
   m_EditorClassIdentifier: 
+  bulletConfigs:
+  - {fileID: 11400000, guid: 0156ad7ff6e030049b9093dc2b679d06, type: 2}
+  - {fileID: 11400000, guid: 82a995816e366f24c9edd5cb4de201b0, type: 2}
+  - {fileID: 11400000, guid: 8000c8c8c891355429e1edf261464228, type: 2}

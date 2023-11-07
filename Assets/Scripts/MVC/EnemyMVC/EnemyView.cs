@@ -6,7 +6,8 @@ using HealthServices;
 
 namespace EnemyMVC {
     /*
-        MonoBehaviour View class for Enemy Tank. All the UI and visible stuff is handled in this class.
+        MonoBehaviour View class for Enemy Tank.
+        All the UI and visible stuff is handled in this class.
     */
     public class EnemyView : MonoBehaviour
     {
@@ -32,12 +33,14 @@ namespace EnemyMVC {
             enemyController.UpdateEnemyState();
         }
 
-       
+        //    Returns reference to the HealthBar attached with the Tank.
+        
         public HealthBar GetHealthBar() {
             return healthBar;
         }
 
-       
+        //    Returns List of MeshRenderers to change the tank Color.
+        
         public MeshRenderer[] GetMaterialMeshes() {
             return COLOR_MATERIALS;
         }
@@ -51,14 +54,20 @@ namespace EnemyMVC {
             enemyController.HandleEnemyCollision(collidedObject);
         }
 
+        //    Returns reference to NavMeshAgent component.
+        
         public NavMeshAgent GetNavMeshAgent() {
             return this.navMeshAgent;
         }
+
+        //    Returns reference to Enemy Tank's transform.
         
         public Transform GetEnemyTransform() {
             return this.transform;
         }
 
+        //    Returns reference to EnemyController.
+        
         public EnemyController GetEnemyController() {
             return enemyController;
         }

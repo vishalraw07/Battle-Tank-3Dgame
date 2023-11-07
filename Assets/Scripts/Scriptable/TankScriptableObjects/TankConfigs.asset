@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b51773c6ac0e2045928dc0e3b2aa52a, type: 3}
+  m_Script: {fileID: 11500000, guid: 08a4935631f93084bb8bc0c4051a6588, type: 3}
   m_Name: TankConfigs
   m_EditorClassIdentifier: 
   tankConfigs:
-  - {fileID: 11400000, guid: 712ebbd21f67bbc4b9b9f2a965c68d83, type: 2}
-  - {fileID: 11400000, guid: 50739f7efe22fbe4a89dcbdf87edcdbf, type: 2}
-  - {fileID: 11400000, guid: 094d23cdefc9be8418dc81155ff9af8d, type: 2}
+  - {fileID: 11400000, guid: e4206130060ae2e40bdc878464881995, type: 2}
+  - {fileID: 11400000, guid: b64c5e44a12ab9b48946ffbffc438187, type: 2}
+  - {fileID: 11400000, guid: 1ec0097a92fbc9c42a6c59ade093acd9, type: 2}
